@@ -1,0 +1,119 @@
+/* Main Container */
+.custom-prog-barr-container {
+    width: 95%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Progress Bar Wrapper */
+.custom-prog-barr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Step Wrapper */
+.custom-step-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Step Circle */
+.custom-step-circle {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    z-index: 2;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Active or Completed Step */
+.custom-step-circle.completed {
+    background-color: #00349A;
+    border-color: #00349A;
+}
+
+/* Step Line Wrapper (Static Line) */
+.custom-step-line {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    height: 3px;
+    background-color: #ccc;
+    /* Static background */
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    /* Hide overflow for pseudo animation */
+}
+
+/* Inner Line for Animation */
+.custom-step-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #00349A;
+    /* Active color */
+    width: 0;
+    /* Starts with no width */
+    transition: width 1s ease-in-out;
+    /* Animate the width */
+}
+
+/* Active State */
+.custom-step-line.active::before {
+    width: 100%;
+    /* Move to full width */
+}
+
+/* Step Label */
+.custom-step-label {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+/* Actions (Buttons) */
+.custom-progress-actions button {
+    margin: 0 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00349A;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-progress-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.custom-progress-actions button:hover:not(:disabled) {
+    background-color: #0d5c2a;
+}
+
+.step-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}

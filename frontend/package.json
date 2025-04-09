@@ -1,0 +1,62 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "antd": "^5.19.3",
+    "apexcharts": "^4.0.0",
+    "axios": "^1.7.5",
+    "bootstrap": "^5.3.3",
+    "cryptocurrency-icons": "^0.18.1",
+    "currency-flags": "^4.0.7",
+    "framer-motion": "^11.15.0",
+    "js-cookie": "^3.0.5",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "ldrs": "^1.0.2",
+    "papaparse": "^5.5.1",
+    "react": "^18.3.1",
+    "react-apexcharts": "^1.5.0",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-qr-code": "^2.0.15",
+    "react-router-dom": "^6.25.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.8.3",
+    "react-signature-canvas": "^1.0.6",
+    "react-toastify": "^10.0.5",
+    "sweetalert2": "^11.16.1",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts --max_old_space_size=4096 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
